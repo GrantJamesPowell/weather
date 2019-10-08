@@ -15,13 +15,16 @@ Running the spec suite
 # What should I be looking at?
 
 This PR shows the building of a wrapper around the Dark Sky API
-https://github.com/GrantJamesPowell/weather/pull/1
+  - https://github.com/GrantJamesPowell/weather/pull/1
 
 This PR shows building a controller to parse user input and then call the Dark Sky API
-https://github.com/GrantJamesPowell/weather/pull/2
+  - https://github.com/GrantJamesPowell/weather/pull/2
 
 This PR shows the making of a mix release and a dockerfile
-https://github.com/GrantJamesPowell/weather/pull/5
+  - https://github.com/GrantJamesPowell/weather/pull/5
 
 This PR shows adding a circle CI config to run the spec suite and the formatter
-https://github.com/GrantJamesPowell/weather/pull/6
+  - https://github.com/GrantJamesPowell/weather/pull/6
+
+This PR shows adding kubernetes files
+  - https://github.com/GrantJamesPowell/weather/pull/7
