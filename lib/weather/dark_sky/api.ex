@@ -1,4 +1,5 @@
 defmodule Weather.DarkSky.Api do
+  require Logger
   @base_url "https://api.darksky.net/forecast/"
 
   @doc """
@@ -6,8 +7,12 @@ defmodule Weather.DarkSky.Api do
   """
   def forecast(api_key, latitude, longitude) do
     case HTTPoison.get("#{base_url()}#{api_key}/#{latitude},#{longitude}") do
-      {:ok, forecast} ->
-        Jason.decode(forecast.body)
+      {:ok, %{status_code: 200, body: body}} ->
+        Jason.decode(body)
+
+      {:ok, %{status_code: 403}} ->
+        Logger.warn("Invalid Credentials Sent to Dark Sky")
+        {:error, :invalid_credentials}
 
       {:error, error} ->
         {:error, error}
