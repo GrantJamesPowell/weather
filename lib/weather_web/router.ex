@@ -19,8 +19,9 @@ defmodule WeatherWeb.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", WeatherWeb do
-  #   pipe_through :api
-  # end
+  scope "/", WeatherWeb do
+    pipe_through :api
+
+    get "/weather", WeatherController, :weather
+  end
 end

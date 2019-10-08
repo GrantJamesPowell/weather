@@ -8,3 +8,5 @@ config :weather, WeatherWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+config :weather, dark_sky_api_key: "NOT_A_REAL_API_KEY"
