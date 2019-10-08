@@ -1,19 +1,22 @@
-# Weather
+# Grant Powell's SalesLoft Engineering Enablement Coding Challenge
 
-To start your Phoenix server:
+To start the weather API server locally:
 
+  * Ensure you have the correct Elixir, Erlang, NodeJs versions locally (check the .tool-versions)
   * Install dependencies with `mix deps.get`
   * Install Node.js dependencies with `cd assets && npm install`
-  * Start Phoenix endpoint with `mix phx.server`
+  * Start Phoenix endpoint with `DARK_SKY_API_KEY=your_api_key_here mix phx.server`
+  * You can now hit `http://localhost:4000/weather?latitude=1.0&longitude=2.0` and get weather data back!
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Running the spec suite
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+`mix test`
 
-## Learn more
+# What should I be looking at?
 
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+This PR shows the building of a wrapper around the Dark Sky API
+https://github.com/GrantJamesPowell/weather/pull/1
+
+This PR shows building a controller to parse user input and then call the Dark Sky API
+https://github.com/GrantJamesPowell/weather/pull/2
+
