@@ -3,18 +3,14 @@ defmodule WeatherWeb.WeatherController do
   alias Weather.DarkSky.Api
 
   def weather(conn, %{"latitude" => lat, "longitude" => lon}) do
-    case {Float.parse(lat), Float.parse(lon)} do
-      {{lat, ""}, {lon, ""}} ->
-        case Api.forecast(api_key(), lat, lon) do
-          {:ok, forecast} ->
-            json(conn, forecast)
-
-          {:error, _} ->
-            api_unavailable(conn)
-        end
-
-      _ ->
-        invalid_parameters(conn)
+    with {:parseable?, {{lat, ""}, {lon, ""}}} <-
+           {:parseable?, {Float.parse(lat), Float.parse(lon)}},
+         {:api_available?, {:ok, forecast}} <-
+           {:api_available?, Api.forecast(api_key(), lat, lon)} do
+      json(conn, forecast)
+    else
+      {:parseable?, _} -> invalid_parameters(conn)
+      {:api_available?, _} -> api_unavailable(conn)
     end
   end
 
