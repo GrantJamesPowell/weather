@@ -20,3 +20,5 @@ https://github.com/GrantJamesPowell/weather/pull/1
 This PR shows building a controller to parse user input and then call the Dark Sky API
 https://github.com/GrantJamesPowell/weather/pull/2
 
+This PR shows the making of a mix release and a dockerfile
+https://github.com/GrantJamesPowell/weather/pull/5
