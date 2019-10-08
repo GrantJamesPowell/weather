@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/elixir:1.9
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: mix local.hex --force  # install Hex locally (without prompt)
+      - run: mix local.rebar --force  # fetch a copy of rebar (without prompt)
+      - run: mix deps.get
+      - run: mix test && mix format --check-formatted

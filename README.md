@@ -22,3 +22,6 @@ https://github.com/GrantJamesPowell/weather/pull/2
 
 This PR shows the making of a mix release and a dockerfile
 https://github.com/GrantJamesPowell/weather/pull/5
+
+This PR shows adding a circle CI config to run the spec suite and the formatter
+https://github.com/GrantJamesPowell/weather/pull/6
