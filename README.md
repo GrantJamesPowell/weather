@@ -36,3 +36,11 @@ Adding the Health Controller
 
 Getting the Release to Read ENVs are runtime correctly (messed this up in pull request 5 🤦)
   - https://github.com/GrantJamesPowell/weather/pull/9
+
+# Is there a place I can try it?
+
+Yep! Checkout 
+```
+https://weather.grantjamespowell.com/weather?latitude=1.0&longitude=1.0
+```
+(It requires a username and password which is available through other channels)
