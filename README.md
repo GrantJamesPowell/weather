@@ -38,7 +38,7 @@ Getting the Release to Read ENVs are runtime correctly (messed this up in pull r
   - https://github.com/GrantJamesPowell/weather/pull/9
 
 Using the Docker Image of this Repo I published to Docker Hub in Kubernetes
-  - https://github.com/GrantJamesPowell/weather/pull/10/files
+  - https://github.com/GrantJamesPowell/weather/pull/10
 
 # Is there a place I can try it?
 
@@ -58,4 +58,13 @@ The `deployment.yml` pulls from the publicly available `grantjamespowell/weather
 
 There is an ingress provided, but it only works with the ingress controller/lets encrypt cert manager my personal cluster uses, so YMMV
 (You won't be able to get an SSL cert for grantjamespowell.com)
+
+# What should I listen to when I'm reading this?
+
+Here are some songs about weather!
+
+- [The Wind Cries Mary](https://open.spotify.com/track/6nE0CA2OSxCHicsdpcvXS7?si=WOc6V3aZSFWB5PAcFv58tg)
+- [Rock You Like a Hurricane](https://open.spotify.com/track/58XWGx7KNNkKneHdprcprX?si=QbG22vkoTn-HpakPjHNF6w)
+- [Here comes the Sun](https://open.spotify.com/track/6dGnYIeXmHdcikdzNNDMm2?si=GV7x6ymtTmy8-7VlzVZndQ)
+- [Sweater Weather](https://open.spotify.com/track/2QjOHCTQ1Jl3zawyYOpxh6?si=lclnSmjqQKGwH6M6orexGA)
 
