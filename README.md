@@ -40,6 +40,9 @@ Getting the Release to Read ENVs are runtime correctly (messed this up in pull r
 Using the Docker Image of this Repo I published to Docker Hub in Kubernetes
   - https://github.com/GrantJamesPowell/weather/pull/10
 
+Liveness/Readiness Check in Kubernetes
+  - https://github.com/GrantJamesPowell/weather/pull/11
+
 # Is there a place I can try it?
 
 Yep! Checkout 
