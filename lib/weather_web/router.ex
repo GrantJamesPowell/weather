@@ -19,6 +19,8 @@ defmodule WeatherWeb.Router do
     get "/", PageController, :index
   end
 
+  get "/health", WeatherWeb.HealthController, :health
+
   scope "/", WeatherWeb do
     pipe_through :api
 
