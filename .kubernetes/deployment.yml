@@ -14,8 +14,7 @@ spec:
     spec:
       containers:
         - name: weather
-          image: grantjamespowell/weather:master
-          imagePullPolicy: Always
+          image: grantjamespowell/weather:43e1f465e56b79ea15a34fbd231b08b167e39adf
           env:
           - name: POD_IP
             valueFrom:
