@@ -75,6 +75,19 @@ defmodule WeatherWeb.WeatherControllerTest do
       conn = get(conn, "/weather?latitude=1.0&longitude=2.0")
       assert json_response(conn, 200) == Jason.decode!(@success_api_response)
     end
+
+    test "it is able to handle negative lats and lons", %{
+      conn: conn,
+      bypass: bypass
+    } do
+      Bypass.expect_once(bypass, fn conn ->
+        assert "/NOT_A_REAL_API_KEY/-1.0,-2.0" == conn.request_path
+        Plug.Conn.resp(conn, 200, @success_api_response)
+      end)
+
+      conn = get(conn, "/weather?latitude=-1.0&longitude=-2.0")
+      assert json_response(conn, 200) == Jason.decode!(@success_api_response)
+    end
   end
 
   defp endpoint_url(port), do: "http://localhost:#{port}/"
