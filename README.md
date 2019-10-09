@@ -33,3 +33,6 @@ Kubernetes Config
 
 Adding the Health Controller
   - https://github.com/GrantJamesPowell/weather/pull/8
+
+Getting the Release to Read ENVs are runtime correctly (messed this up in pull request 5 🤦)
+  - https://github.com/GrantJamesPowell/weather/pull/9
